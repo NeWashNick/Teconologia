@@ -1,11 +1,18 @@
-﻿
-namespace bank;
+﻿namespace bank;
 
-/// <summary>
-/// Тип данных который запрещает менять состояние обьекта
-/// </summary>
-/// <param name="Amount">сумма транзакций</param>
-/// <param name="Date">дата транзакций</param>
-/// <param name="Note">заметка транзакций</param>
+public record Transactionn(decimal Amount, DateTime date, string Note); // record - Состояние объектов этого класса нельзя изменить
 
-internal record Transaction(decimal Amount, DateTime Date, string Note);
+// это то же самое 
+
+//internal record Transactionn
+//{
+//    public decimal Amount { get; }
+//    public DateTime Date { get; }
+//    public string Note { get; }
+//     public Transactionn(decimal Amount, DateTime date, string Note)
+//    { 
+//        this.Amount = Amount;
+//        this.Note = Note;
+//        this.Date = Date;
+//    }
+//}
